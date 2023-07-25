@@ -17,6 +17,10 @@ class dashboardPage {
     this.elements.txt_forms().click();
   }
 
+  clickOnLinks() {
+    return this.elements.txt_links();
+  }
+
   clickOnAlerts() {
     this.elements.txt_alerts().click();
   }

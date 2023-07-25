@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add("loginToApp", (username, password) => {
+  cy.get('input[name="user-name"]').type(username);
+  cy.get('input[name="password"]').type(password);
+  cy.get(".submit-button").click();
+});
+
+Cypress.Commands.add(
+  "clickText",
+  { prevSubject: "element" },
+  (subject, options) => {
+    cy.get(prevSubject).each(($el, index, $list) => {
+      if ($el.text() === subject) {
+        cy.wrap($el).click({ force: true });
+      }
+    });
+  }
+);

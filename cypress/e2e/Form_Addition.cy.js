@@ -11,7 +11,9 @@ describe("Demo QA Page", () => {
 
   it("Student Registration Form", function () {
     cy.visit("/");
-    dashboardPageCy.clickOnForms();
+    const txt_links= "div > div > div.card-body > h5";
+    cy.get(txt_links).contains("Forms").click();
+    // cy.clickButton(dashboardPageCy.elements.txt_links, "Forms");
     formPageCy.clickOnPracticeForm();
 
     studentRegFormPageCy.clearFirstName().type(this.data.firstName);
