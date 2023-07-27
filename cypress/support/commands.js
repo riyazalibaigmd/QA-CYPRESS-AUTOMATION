@@ -28,3 +28,7 @@ Cypress.Commands.add("loginToApp", (username, password) => {
   cy.get('input[name="password"]').type(password);
   cy.get(".submit-button").click();
 });
+
+Cypress.Commands.add("cssID", (username) => {
+  cy.get("#" + username);
+});
