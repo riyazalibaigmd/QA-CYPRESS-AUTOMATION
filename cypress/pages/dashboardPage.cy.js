@@ -1,40 +1,30 @@
 class dashboardPage {
-  elements = {
-    txt_elements: () => cy.get("div:nth-child(1) > div > div.card-body > h5"),
-    txt_forms: () => cy.get("div:nth-child(2) > div > div.card-body > h5"),
-    txt_alerts: () => cy.get("div:nth-child(3) > div > div.card-body > h5"),
-    txt_widgets: () => cy.get("div:nth-child(4) > div > div.card-body > h5"),
-    txt_interactions: () =>
-      cy.get("div:nth-child(5) > div > div.card-body > h5"),
-    txt_bookstore: () => cy.get("div:nth-child(6) > div > div.card-body > h5"),
-  };
-
-  clickOnElements() {
-    this.elements.txt_elements().click();
+  getLinks() {
+    return cy.get("div > div > div.card-body > h5");
   }
 
-  clickOnForms() {
-    this.elements.txt_forms().click();
+  getElements() {
+    return cy.get("div:nth-child(1) > div > div.card-body > h5");
   }
 
-  clickOnLinks() {
-    return this.elements.txt_links();
+  getForms() {
+    return cy.get("div:nth-child(2) > div > div.card-body > h5");
   }
 
-  clickOnAlerts() {
-    this.elements.txt_alerts().click();
+  getAlerts() {
+    return cy.get("div:nth-child(3) > div > div.card-body > h5");
   }
 
-  clickOnWidgets() {
-    this.elements.txt_widgets().click();
+  getWidgets() {
+    return cy.get("div:nth-child(4) > div > div.card-body > h5");
   }
 
-  clickOnInteractions() {
-    this.elements.txt_interactions().click();
+  getInteractions() {
+    return cy.get("div:nth-child(5) > div > div.card-body > h5");
   }
 
-  clickOnBookStore() {
-    this.elements.txt_bookstore().click();
+  getBookStore() {
+    return cy.get("div:nth-child(6) > div > div.card-body > h5");
   }
 }
 

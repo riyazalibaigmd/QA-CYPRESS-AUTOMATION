@@ -1,21 +1,15 @@
 class weatherDataPage {
-    elements = {
-        txt_PageTitle: () => cy.get("div > h1 > span"),
-        txt_Location: () => cy.get("#wxlocation"),
-        btn_Search: () => cy.xpath("//div[@class='d-sm-flex']//button[@type='submit'] ")
-    };
+  getPageTitle() {
+    return cy.get("div > h1 > span");
+  }
 
-    getPageTitle() {
-        return this.elements.txt_PageTitle();
-    }
+  getLocationText() {
+    return cy.get("#wxlocation");
+  }
 
-    getLocationText() {
-        return this.elements.txt_Location();
-    }
-
-    getSearchBtn() {
-        return this.elements.btn_Search();
-    }
+  getSearchBtn() {
+    return cy.xpath("//div[@class='d-sm-flex']//button[@type='submit'] ");
+  }
 }
 
 module.exports = new weatherDataPage();

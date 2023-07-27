@@ -1,6 +1,6 @@
-import weatherDataLandingPageCy from "../pages/weatherDataLandingPage.cy";
-import weatherDataPageCy from "../pages/weatherDataPage.cy";
-import weatherHistoryPageCy from "../pages/weatherHistoryPage.cy";
+import weatherDataLandingPageCy from "../../pages/weatherDataLandingPage.cy";
+import weatherDataPageCy from "../../pages/weatherDataPage.cy";
+import weatherHistoryPageCy from "../../pages/weatherHistoryPage.cy";
 
 describe("Weather Data UI Validation", () => {
   beforeEach(function () {

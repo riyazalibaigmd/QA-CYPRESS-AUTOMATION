@@ -1,50 +1,38 @@
 class studentRegFormPage {
-  elements = {
-    txt_firstName: () => cy.get("#firstName"),
-    txt_lastName: () => cy.get("#lastName"),
-    txt_userEmail: () => cy.get("#userEmail"),
-    chk_gender: () => cy.get("#gender-radio-1"),
-    txt_mobile: () => cy.get("#userNumber"),
-    txt_dob: () => cy.get("#dateOfBirthInput"),
-    txt_subjects: () => cy.get("#subjectsContainer"),
-    chk_hobbies: () => cy.get("#hobbies-checkbox-1"),
-    txt_currentAddress: () => cy.get("#currentAddress"),
-  };
-
-  clearFirstName() {
-    return this.elements.txt_firstName().clear();
+  getFirstName() {
+    return cy.get("#firstName");
   }
 
-  clearLastName() {
-    return this.elements.txt_lastName().clear();
+  getLastName() {
+    return cy.get("#lastName");
   }
 
-  clearUserEmail() {
-    return this.elements.txt_userEmail().clear();
+  getUserEmail() {
+    return cy.get("#userEmail");
   }
 
-  clickOnMaleGender() {
-    this.elements.chk_gender().click();
+  getMaleGender() {
+    return cy.get("#gender-radio-1");
   }
 
-  clearMobile() {
-    return this.elements.txt_mobile().clear();
+  getMobile() {
+    return cy.get("#userNumber");
   }
 
-  clickDOB() {
-    return this.elements.txt_dob().click();
+  getDOB() {
+    return cy.get("#dateOfBirthInput");
   }
 
-  clickSubjects() {
-    return this.elements.txt_subjects().click();
+  getSubjects() {
+    return cy.get("#subjectsContainer");
   }
 
-  clickOnSports() {
-    this.elements.chk_hobbies().click();
+  getHobbies() {
+    return cy.get("#hobbies-checkbox-1");
   }
 
-  clearCurrentAddress() {
-    return this.elements.txt_currentAddress().clear();
+  getCurrentAddress() {
+    return cy.get("#currentAddress");
   }
 }
 
