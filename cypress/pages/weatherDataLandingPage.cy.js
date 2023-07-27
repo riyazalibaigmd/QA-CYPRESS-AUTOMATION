@@ -1,13 +1,9 @@
-class weatherDataLandingPage {
-  getWeatherData() {
-    return cy.get("#navbarNav > ul > li > a");
-  }
-
-  getRejectCookies() {
-    return cy.xpath(
-      "//div[@class='row']/button[contains(text(),'Reject optional cookies')]"
-    );
-  }
+export function getWeatherData() {
+  return cy.get("#navbarNav > ul > li > a");
 }
 
-module.exports = new weatherDataLandingPage();
+export function getRejectCookies() {
+  return cy.xpath(
+    "//div[@class='row']/button[contains(text(),'Reject optional cookies')]"
+  );
+}

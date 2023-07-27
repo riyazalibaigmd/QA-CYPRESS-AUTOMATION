@@ -1,7 +1,3 @@
-class weatherHistoryPage {
-  getPageTitle() {
-    return cy.xpath("//h1");
-  }
+export function getHistoryPageTitle() {
+  return cy.xpath("//h1");
 }
-
-module.exports = new weatherHistoryPage();

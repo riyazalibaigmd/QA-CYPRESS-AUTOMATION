@@ -1,6 +1,6 @@
-import dashboardPageCy from "../../pages/dashboardPage.cy";
-import formPageCy from "../../pages/formPage.cy";
-import studentRegFormPageCy from "../../pages/studentRegFormPage.cy";
+import {getLinks, getForms} from "../../pages/dashboardPage.cy";
+import {getLnkForm, getPracticeForm} from "../../pages/formPage.cy";
+import {getFirstName, getLastName, getUserEmail, getMobile, getCurrentAddress} from "../../pages/studentRegFormPage.cy";
 
 describe("Demo QA Page", () => {
   beforeEach(function () {
@@ -11,15 +11,14 @@ describe("Demo QA Page", () => {
 
   it("Student Registration Form", function () {
     cy.visit("/");
-    // const txt_links= "div > div > div.card-body > h5";
-    // cy.get(txt_links).contains("Forms").click();
-    cy.clickText(dashboardPageCy.getLinks(), "Forms");
-    formPageCy.getPracticeForm().click();
+    getLinks().contains("Forms").click();
+    getLnkForm().contains("Forms").click();
+    getPracticeForm().click({force: true});
 
-    studentRegFormPageCy.getFirstName().type(this.data.firstName);
-    studentRegFormPageCy.getLastName().type(this.data.lastName);
-    studentRegFormPageCy.getUserEmail().type(this.data.userEmail);
-    studentRegFormPageCy.getMobile().type(this.data.userNumber);
-    studentRegFormPageCy.getCurrentAddress().type(this.data.currentAddress);
+    getFirstName().type(this.data.firstName);
+    getLastName().type(this.data.lastName);
+    getUserEmail().type(this.data.userEmail);
+    getMobile().type(this.data.userNumber);
+    getCurrentAddress().type(this.data.currentAddress);
   });
 });

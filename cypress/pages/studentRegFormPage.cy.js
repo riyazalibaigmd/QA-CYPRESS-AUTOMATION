@@ -1,39 +1,35 @@
-class studentRegFormPage {
-  getFirstName() {
-    return cy.get("#firstName");
-  }
-
-  getLastName() {
-    return cy.get("#lastName");
-  }
-
-  getUserEmail() {
-    return cy.get("#userEmail");
-  }
-
-  getMaleGender() {
-    return cy.get("#gender-radio-1");
-  }
-
-  getMobile() {
-    return cy.get("#userNumber");
-  }
-
-  getDOB() {
-    return cy.get("#dateOfBirthInput");
-  }
-
-  getSubjects() {
-    return cy.get("#subjectsContainer");
-  }
-
-  getHobbies() {
-    return cy.get("#hobbies-checkbox-1");
-  }
-
-  getCurrentAddress() {
-    return cy.get("#currentAddress");
-  }
+export function getFirstName() {
+  return cy.get("#firstName");
 }
 
-module.exports = new studentRegFormPage();
+export function getLastName() {
+  return cy.get("#lastName");
+}
+
+export function getUserEmail() {
+  return cy.get("#userEmail");
+}
+
+export function getMaleGender() {
+  return cy.get("#gender-radio-1");
+}
+
+export function getMobile() {
+  return cy.get("#userNumber");
+}
+
+export function getDOB() {
+  return cy.get("#dateOfBirthInput");
+}
+
+export function getSubjects() {
+  return cy.get("#subjectsContainer");
+}
+
+export function getHobbies() {
+  return cy.get("#hobbies-checkbox-1");
+}
+
+export function getCurrentAddress() {
+  return cy.get("#currentAddress");
+}

@@ -1,11 +1,7 @@
-class formPage {
-  getLnkForms() {
-    return cy.get("div > div:nth-child(2) > span");
+  export function getLnkForm() {
+    return cy.get("div > div > span");
   }
 
-  getPracticeForm() {
+  export function getPracticeForm() {
     return cy.xpath("//span[contains(text(), 'Practice Form')]")
   }
-}
-
-module.exports = new formPage();

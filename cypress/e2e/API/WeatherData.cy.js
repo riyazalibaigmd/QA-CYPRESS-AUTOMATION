@@ -12,7 +12,7 @@ describe("template spec", () => {
       url: "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Hyderabad",
         qs:{
             "unitGroup": "metric",
-            "key": "${this.data.access_key}",
+            "key": 'AM5A6CQK78HU5LYRW4NGLCEQY',
             "contentType": "json"
          }
     }).then((response) => {
